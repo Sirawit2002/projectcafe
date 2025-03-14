@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    /* ทำให้หน้าเว็บเต็มความกว้างของหน้าจอ */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+        box-sizing: border-box;
+    }
+
+    /* กำหนดความกว้างและการตั้งกลางฟอร์ม */
+    .login-container {
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        transition: box-shadow 0.3s ease;
+    }
+
+    /* เพิ่มสีให้ฟอร์มมีความน่าสนใจ */
+    .login-container:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* กำหนดความสวยงามของหัวข้อ */
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 600;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    /* กำหนดสไตล์ให้กับป้ายชื่อ (label) */
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* สไตล์ของ input */
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    /* เมื่อฟอร์ม input ถูกโฟกัส (focus) เปลี่ยนสีกรอบ */
+    input[type="text"]:focus, input[type="password"]:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    /* ปรับสไตล์ให้กับปุ่มล็อคอิน */
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* เปลี่ยนสีปุ่มเมื่อ hover */
+    button:hover {
+        background-color: #45a049;
+    }
+
+    /* สไตล์ข้อความแจ้งเตือน (ถ้าต้องการเพิ่มข้อความเตือนหรือแนะนำ) */
+    .message {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .message a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .message a:hover {
+        text-decoration: underline;
+    }
+
+    /* ปรับความสูงของหน้าเพจให้มีพื้นที่เหมาะสม */
+    .message p {
+        margin: 0;
+    }
+
+    /* สไตล์สำหรับข้อความแจ้งเตือนการล็อคอิน */
+    .error-message {
+        color: red;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>ล็อคอิน</h2>
+    <form action="login.php" method="POST">
+      <label for="username">ชื่อผู้ใช้:</label>
+      <input type="text" id="username" name="username" required><br>
+      
+      <label for="password">รหัสผ่าน:</label>
+      <input type="password" id="password" name="password" required><br>
+      
+      <button type="submit">ล็อคอิน</button>
+    </form>
+
+    <!-- ข้อความการสมัครสมาชิกใหม่ -->
+    <div class="message">
+      <p>ยังไม่มีบัญชี? <a href="register.php">สมัครสมาชิก</a></p>
+    </div>
+
+    <!-- แสดงข้อความแจ้งเตือนหากล็อคอินไม่สำเร็จ -->
+
+  </div>
+</body>
+</html>
